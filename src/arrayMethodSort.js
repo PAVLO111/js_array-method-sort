@@ -11,7 +11,9 @@ function applyCustomSort() {
         const A = String(a);
         const B = String(b);
 
-        if (A === B)  return 0;
+        if (A === B) {
+          return 0;
+        }
 
         return A > B ? 1 : -1;
       });
@@ -33,6 +35,7 @@ function applyCustomSort() {
   };
 }
 
+// eslint-disable-next-line no-extend-native
 Array.prototype.sort = function (compareFunction) {
   return [].__proto__.sort2.call(this, compareFunction);
 };
