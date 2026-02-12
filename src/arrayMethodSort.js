@@ -8,11 +8,12 @@ function applyCustomSort() {
     const input =
       compareFunction ||
       ((a, b) => {
-        if (String(a) === String(b)) {
-          return 0;
-        } else {
-          return String(a) > String(b) ? 1 : -1;
-        }
+        const A = String(a);
+        const B = String(b);
+
+        if (A === B)  return 0;
+
+        return A > B ? 1 : -1;
       });
 
     for (let i = 0; i < this.length; i++) {
