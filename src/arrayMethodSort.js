@@ -33,11 +33,11 @@ function applyCustomSort() {
 
     return this;
   };
-}
 
-// eslint-disable-next-line no-extend-native
-Array.prototype.sort = function (compareFunction) {
-  return [].__proto__.sort2.call(this, compareFunction);
-};
+  // eslint-disable-next-line no-extend-native
+  Array.prototype.sort = function (compareFunction) {
+    return [].__proto__.sort2.call(this, compareFunction);
+  };
+}
 
 module.exports = applyCustomSort;
